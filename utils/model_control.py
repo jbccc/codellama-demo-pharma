@@ -5,6 +5,9 @@ sys_test_prompt = (
 
 def get_model_test_prompt_answer(prompt, llm_name, code_llm_name, temp, api_key, api_base):
     import openai as model
+    # clears chat history
+    model.ChatCompletion
+
     model.api_base = api_base  
     model.api_key = api_key
 
