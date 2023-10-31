@@ -1,0 +1,11 @@
+var_name,var_label,domain,source_derivation
+STUDYID,Study Identifier,dm,DM.STUDYID
+USUBJID,Unique Subject Identifier,dm,DM.USUBJID
+SITEID,Study Site Identifier,dm,DM.SITEID
+AGE,Age,dm,DM.AGE
+SEX,Sex,dm,DM.SEX
+RACE,Race,dm,DM.RACE
+ARM,Description of Planned Arm,dm,DM.ARM
+TRTSDT,Treatment Start Date,ex,DM.RFXSTDTC
+TRTEDT,Treatment End Date,ex,EX.EXENDTC but taking the last date of the last treatment
+TRTxP,Planned Treatment for Period x,ex,it is the time difference in days between ADSL.TRTSDT and ADSL.TRTEDT

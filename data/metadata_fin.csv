@@ -1,0 +1,12 @@
+col_id,domain,instruction
+STUDYID,dm,Same Value
+USUBJID,dm,Same Value
+DOMAIN,dm,Same Value
+BRTHDTC,dm,Same Value
+RFSTDC,dm,Same Value
+SEX,dm,Same Value
+HEIGHT_CM,dm,Same Value
+"WEIGHT_KG, ",dm,Same Value
+AGE,dm,AGE is the integer difference in year between RFSTDC (first day enrolled in the trial) and BRTHDTC (birthday date). All dates are given in MM/DD/YYYY.
+BMI,dm,Compute the Body Mass Index of the patient. The formula is mass/height^2. mass is always in kg. Height is always given in cm but should be used in m.
+OVERWEIGHT,dm,"Flag if the BMI is over 25, returns false otherwise."

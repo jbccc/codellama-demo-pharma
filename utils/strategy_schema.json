@@ -1,0 +1,74 @@
+{   
+    "schema": {
+        "type": "array",
+        "items": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "display_name": {
+                    "type": "string"
+                },
+                "prompts": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "title": {
+                                "type": "string"
+                            },
+                            "keys": {
+                                "type": "string",
+                                "enum": [
+                                    "custom_keys",
+                                    "metadata_columns"
+                                ]
+                            },
+                            "custom_keys": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            },
+                            "examples": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "required": [
+                            "title",
+                            "keys"
+                        ]
+                    },
+                    "minItems": 1,
+                    "maxItems": 2
+                },
+                "explanations": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "subtitle": {
+                                "type": "string"
+                            },
+                            "markdown": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            },
+            "required": [
+                "name",
+                "display_name",
+                "prompts",
+                "explanations"
+            ],
+            "additionalProperties": false
+
+        }
+    }
+}
