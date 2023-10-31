@@ -39,12 +39,12 @@ if btn_load:
     else:
         cache_load_status[1].error("Error: metadata not loaded because it is not valid")
 
-st.subheader("Data Preview")
-st.caption("These data are, of course, fake, and comes from the [clinical_fd](https://github.com/sas2r/clinical_fd/) repository on GitHub. The dataset contains _both SDTM __and__ ADaM models_, as well as other data. ")
-base_dataset_dir = ".\data\extdata"
-list_of_domain = os.listdir(base_dataset_dir)
-selected_ds = st.selectbox("Choose domain to preview", list_of_domain, key="domain")
-if selected_ds:
-    st.write(f"Previewing {selected_ds}")
-    st.dataframe(pd.read_csv(os.path.join(base_dataset_dir, selected_ds)))
+# st.subheader("Data Preview")
+# st.caption("These data are, of course, fake, and comes from the [clinical_fd](https://github.com/sas2r/clinical_fd/) repository on GitHub. The dataset contains _both SDTM __and__ ADaM models_, as well as other data. ")
+# base_dataset_dir = ".\data\extdata"
+# list_of_domain = os.listdir(base_dataset_dir)
+# selected_ds = st.selectbox("Choose domain to preview", list_of_domain, key="domain")
+# if selected_ds:
+#     st.write(f"Previewing {selected_ds}")
+#     st.dataframe(pd.read_csv(os.path.join(base_dataset_dir, selected_ds)))
 
