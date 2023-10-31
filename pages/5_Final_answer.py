@@ -59,3 +59,6 @@ st.session_state.update({"final_answer":code})
 
 st.title("Final answer")
 st.code(st.session_state.get("final_answer"), )
+
+with st.expander("display raw output"):
+    st.write(output)

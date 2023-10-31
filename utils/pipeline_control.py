@@ -52,13 +52,10 @@ def get_prompt(rs_df:pd.DataFrame, template:str, variables:dict):
     output_parser = StructuredOutputParser.from_response_schemas(response_schemas)
     format_instructions = output_parser.get_format_instructions()
     args = {k:"\n".join(v) if isinstance(v, list) else v for k,v in variables.items()}
-    template = template.format(
-        **args
-    )
-    template = "{{response_schemas}}\n {template}".format(template=template)
+    template = "{template}\n{{response_schemas}}".format(template=template)
     prompt = PromptTemplate(
         template=template,
-        input_variables=[],
+        input_variables=[*args],
         partial_variables={"response_schemas":format_instructions}
     )
-    return prompt.format()
+    return prompt.format(**args)
