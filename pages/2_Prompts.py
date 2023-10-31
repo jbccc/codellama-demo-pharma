@@ -75,12 +75,12 @@ with my_grid.container():
     if not visualizing:
         prompt_selection("code_snip", prompt1_ex)
         st.markdown(f"Variables must be in: {', '.join(map(lambda col: f'*{col}*', cols_to_choose))}")
-        cols = st.columns(2)
-        info = st.empty()
-        with cols[0]:
-            add_example_to_strategy(strat_id, 0, st.session_state.get("code_snip"), info)
-        with cols[1]:
-            pop_example_from_strategy(strat_id, 0, st.session_state.get("code_snip"), info)
+        # cols = st.columns(2)
+        # info = st.empty()
+        # with cols[0]:
+        #     add_example_to_strategy(strat_id, 0, st.session_state.get("code_snip"), info)
+        # with cols[1]:
+        #     pop_example_from_strategy(strat_id, 0, st.session_state.get("code_snip"), info)
     else:
         matches_code1, code1_text_formatted = extract_variables_with_replacement(st.session_state.get("code_snip_prompt", ""))
         st.markdown(code1_text_formatted,)
@@ -107,12 +107,12 @@ with my_grid.container():
     if not visualizing:
         prompt_selection("aggr_code", prompt2_ex)
         st.markdown(f"Variables must be in: {', '.join(map(lambda col: f'*{col}*', cols_to_choose))}")
-        cols = st.columns(2)
-        info = st.empty()
-        with cols[0]:
-            add_example_to_strategy(strat_id, 1, st.session_state.get("aggr_code_prompt"), info)
-        with cols[1]:
-            pop_example_from_strategy(strat_id, 1, st.session_state.get("aggr_code_prompt"), info)
+        # cols = st.columns(2)
+        # info = st.empty()
+        # with cols[0]:
+        #     add_example_to_strategy(strat_id, 1, st.session_state.get("aggr_code_prompt"), info)
+        # with cols[1]:
+        #     pop_example_from_strategy(strat_id, 1, st.session_state.get("aggr_code_prompt"), info)
     else:
         matches_code2, code2_text_formatted = extract_variables_with_replacement(st.session_state.get("aggr_code_prompt", ""))
         st.markdown(code2_text_formatted,)
